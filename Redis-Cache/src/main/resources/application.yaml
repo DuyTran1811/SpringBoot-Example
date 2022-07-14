@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb
+    username: root
+    password: duytc
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: true
+    show-sql: false
+    open-in-view: false
+  cache:
+    type: redis
+    cache-names: country
+    redis:
+      time-to-live: 6000000
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81

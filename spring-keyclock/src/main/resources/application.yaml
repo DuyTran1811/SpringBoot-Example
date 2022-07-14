@@ -1,0 +1,38 @@
+server:
+  port: 8088
+
+
+keycloak:
+  realm: Demo-Realm
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  resource: office
+  credentials:
+    secret: ASpRdZNMQ26C2TZvULDIdCHoKwhQ10PL
+  use-resource-role-mappings: true
+  bearer-only: true
+security-collections:
+  patterns:
+    - /webjars/swagger-ui/**
+      - /v3/api-docs/**
+      - /swagger-resources/**
+      - /webjars/**
+      - /swagger-ui/**
+      - /swagger-ui.html
+      - /null/swagger-resources/**
+      - /api/user/register/**
+      - /api/province/**
+      - /api/district/**
+      - /api/commune/**
+      - /api/user/auth/v1/login
+      - /api/user/auth/v1/refreshToken
+      - /api/password/v1/recoverNewPassword
+      - /api/password/v1/forgotPasswordRequest
+      - /api/user/external/v1/**
+      - /actuator/**
+      - /api/v1/user-manage/**
+      - /api/quickVerify/external/**
+      - /api/longPolling/**
+      - /inform
+
+
